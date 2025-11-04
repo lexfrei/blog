@@ -39,6 +39,26 @@ name = "github"
 url = "https://github.com/lexfrei"
 
 [[params.socialIcons]]
+name = "x"
+url = "https://x.com/lexfrei"
+
+[[params.socialIcons]]
+name = "linkedin"
+url = "https://www.linkedin.com/in/lexfrei"
+
+[[params.socialIcons]]
+name = "telegram"
+url = "https://t.me/lexfrei"
+
+[[params.socialIcons]]
+name = "instagram"
+url = "https://www.instagram.com/lexfrei"
+
+[[params.socialIcons]]
+name = "rss"
+url = "/index.xml"
+
+[[params.socialIcons]]
 name = "email"
 url = "mailto:f@lex.la"
 
@@ -61,8 +81,12 @@ series = "series"
       description = "Personal blog about SRE, DevOps, and other tech stuff"
 
     [languages.en.params.homeInfoParams]
-      Title = "blog.lex.la"
-      Content = "Personal blog about SRE, DevOps, and other tech stuff"
+      Title = "Hi, I'm Aleksei 👋"
+      Content = """
+SRE from Moscow. Writing about infrastructure, reliability engineering, DevOps, and tech in general.
+
+🔗 [me.lex.la](https://me.lex.la) | 📸 [ph.lex.la](https://ph.lex.la)
+"""
 
   [languages.ru]
     languageName = "Русский"
@@ -74,5 +98,9 @@ series = "series"
       description = "Личный блог про SRE, DevOps и другие технологии"
 
     [languages.ru.params.homeInfoParams]
-      Title = "blog.lex.la"
-      Content = "Личный блог про SRE, DevOps и другие технологии"
+      Title = "Привет, я Алексей 👋"
+      Content = """
+SRE из Москвы. Пишу про инфраструктуру, reliability engineering, DevOps и технологии в целом.
+
+🔗 [me.lex.la](https://me.lex.la) | 📸 [ph.lex.la](https://ph.lex.la)
+"""
