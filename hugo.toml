@@ -81,9 +81,16 @@ series = "series"
       description = "Personal blog about SRE, DevOps, and other tech stuff"
 
     [languages.en.params.homeInfoParams]
-      Title = "Hi, I'm Aleksei 👋"
+      Title = "Hi, I'm Aleksei, 32 👋"
       Content = """
-SRE from Moscow. Writing about infrastructure, reliability engineering, DevOps, and tech in general.
+SRE/DevOps engineer. Proud dog father. 🐕
+
+Living in Moscow, Russia. **Looking for relocation opportunities.**
+
+Writing about infrastructure, reliability engineering, k8s, Go, and distributed systems.
+
+**Skills:** Linux · Kubernetes · Go
+**Interests:** ARM adoption · Open Source · Photography
 
 🔗 [me.lex.la](https://me.lex.la) | 📸 [ph.lex.la](https://ph.lex.la)
 """
@@ -98,9 +105,16 @@ SRE from Moscow. Writing about infrastructure, reliability engineering, DevOps, 
       description = "Личный блог про SRE, DevOps и другие технологии"
 
     [languages.ru.params.homeInfoParams]
-      Title = "Привет, я Алексей 👋"
+      Title = "Привет, я Алексей, 32 👋"
       Content = """
-SRE из Москвы. Пишу про инфраструктуру, reliability engineering, DevOps и технологии в целом.
+SRE/DevOps инженер. Гордый отец пса. 🐕
+
+Живу в Москве, Россия. **Ищу возможности релокации.**
+
+Пишу про инфраструктуру, reliability engineering, k8s, Go и распределённые системы.
+
+**Навыки:** Linux · Kubernetes · Go
+**Интересы:** ARM adoption · Open Source · Фотография
 
 🔗 [me.lex.la](https://me.lex.la) | 📸 [ph.lex.la](https://ph.lex.la)
 """
