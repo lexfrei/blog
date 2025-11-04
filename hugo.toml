@@ -1,7 +1,6 @@
 baseURL = 'https://blog.lex.la/'
-languageCode = 'en-us'
-title = 'blog.lex.la'
 theme = 'PaperMod'
+defaultContentLanguage = 'en'
 
 enableRobotsTXT = true
 buildDrafts = false
@@ -14,8 +13,6 @@ minifyOutput = true
 
 [params]
 env = "production"
-title = "blog.lex.la"
-description = "Personal blog"
 author = "Aleksei Sviridkin"
 
 defaultTheme = "auto"
@@ -45,10 +42,6 @@ url = "https://github.com/lexfrei"
 name = "email"
 url = "mailto:f@lex.la"
 
-[params.homeInfoParams]
-Title = "blog.lex.la"
-Content = "Personal blog about SRE, DevOps, and other tech stuff"
-
 [outputs]
 home = ["HTML", "RSS", "JSON"]
 
@@ -56,3 +49,30 @@ home = ["HTML", "RSS", "JSON"]
 category = "categories"
 tag = "tags"
 series = "series"
+
+[languages]
+  [languages.en]
+    languageName = "English"
+    languageCode = "en-us"
+    weight = 1
+    title = "blog.lex.la"
+
+    [languages.en.params]
+      description = "Personal blog about SRE, DevOps, and other tech stuff"
+
+    [languages.en.params.homeInfoParams]
+      Title = "blog.lex.la"
+      Content = "Personal blog about SRE, DevOps, and other tech stuff"
+
+  [languages.ru]
+    languageName = "Русский"
+    languageCode = "ru-ru"
+    weight = 2
+    title = "blog.lex.la"
+
+    [languages.ru.params]
+      description = "Личный блог про SRE, DevOps и другие технологии"
+
+    [languages.ru.params.homeInfoParams]
+      Title = "blog.lex.la"
+      Content = "Личный блог про SRE, DevOps и другие технологии"
