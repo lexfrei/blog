@@ -99,79 +99,21 @@ When translating content between Russian and English, follow the **Tolkien trans
 
 The blog represents professional identity in the global tech community. Err on the side of caution.
 
-## Common Issues and Solutions
-
-### Infinite Redirect Loop
-
-**Symptom**: Opening `/en/` or `/ru/` causes endless redirects (browser shows "too many redirects" error)
-
-**Root Cause**: Using `layouts/index.html` for language detection. Hugo applies this template to ALL homepage pages (`/`, `/en/`, `/ru/`), causing the redirect script to execute on language-specific pages.
-
-**Solution**: Use `layouts/alias.html` instead:
-```html
-<script>
-    (function() {
-        // CRITICAL: Only redirect at root
-        if (window.location.pathname !== '/') {
-            window.location.replace('{{ .Permalink }}');
-            return;
-        }
-        // Language detection logic here...
-    })();
-</script>
-```
-
-**Why it works**: Hugo only applies `alias.html` to alias redirects (like root `/` when `defaultContentLanguageInSubdir = true`), not to actual content pages.
-
-### Giscus 404 After Login
-
-**Symptom**: Clicking "Sign in with GitHub" in Giscus comments returns 404 error page
-
-**Root Cause**: Usually caused by infinite redirect loop. GitHub OAuth callback URL gets caught in redirect cycle.
-
-**Solution**: Fix the redirect loop first (see above). Once `/en/` and `/ru/` load without redirecting, Giscus OAuth will work.
-
-### Hugo Build Artifacts in Git
-
-**Symptom**: `.hugo_build.lock` file appears in git status
-
-**Solution**: Already added to `.gitignore`. This is Hugo's temporary lock file and should never be committed.
-
-### Theme Not Loading
-
-**Symptom**: Site builds but shows no styling, "theme not found" errors
-
-**Root Cause**: PaperMod theme submodule not initialized
-
-**Solution**:
-```bash
-git submodule update --init --recursive
-```
-
 ## Technical Notes
 
 ### Build Process
 
-**Always clean build before testing redirect changes**:
+For clean builds (recommended when testing major changes):
 ```bash
 rm -rf public && hugo --gc --minify
 ```
 
-Hugo may cache old builds in `public/`, leading to false test results.
-
 ### File Locations
 
 - **Generated site**: `public/` (gitignored, never commit)
-- **Build lock**: `.hugo_build.lock` (gitignored, temporary)
+- **Build lock**: `.hugo_build.lock` (gitignored, Hugo temporary file)
 - **Static assets**: `static/` (copied as-is to `public/`)
-- **Theme**: `themes/PaperMod/` (git submodule)
-
-### Testing Language Detection
-
-1. Build site: `hugo --gc --minify`
-2. Check root redirect: `cat public/index.html` (should contain browser detection JS)
-3. Check language pages: `grep -c 'window.location.replace' public/en/index.html` (should return 0)
-4. Test in browser with different language settings
+- **Theme**: `themes/PaperMod/` (git submodule, update with `git submodule update --init --recursive`)
 
 ### Deployment
 
@@ -184,10 +126,10 @@ Typical deploy time: ~50 seconds
 
 ## Additional Documentation
 
-For detailed technical information, architecture decisions, and troubleshooting:
-- See `README.md` for comprehensive technical documentation
-- See `hugo.toml` for all configuration options
-- See `.github/workflows/hugo.yml` for deployment workflow
+For comprehensive technical information, architecture decisions, and troubleshooting, see:
+- `README.md` - Full technical documentation and rationale for all technology choices
+- `hugo.toml` - All configuration options
+- `.github/workflows/hugo.yml` - Deployment workflow
 
 ## Important Notes
 
