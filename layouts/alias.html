@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="{{ site.Language.LanguageCode }}">
+<head>
+    <meta charset="utf-8">
+    <title>{{ .Permalink }}</title>
+    <link rel="canonical" href="{{ .Permalink }}">
+    <meta name="robots" content="noindex">
+    <script>
+        (function() {
+            // Only apply i18n redirect at root
+            // For all other aliases, redirect immediately
+            if (window.location.pathname !== '/') {
+                window.location.replace('{{ .Permalink }}');
+                return;
+            }
+
+            // Get browser language preference
+            function getFirstBrowserLanguage() {
+                var nav = window.navigator;
+                var browserLanguagePropertyKeys = ['language', 'browserLanguage', 'systemLanguage', 'userLanguage'];
+                var language;
+
+                // Support HTML 5.1 "navigator.languages"
+                if (Array.isArray(nav.languages)) {
+                    for (var i = 0; i < nav.languages.length; i++) {
+                        language = nav.languages[i];
+                        if (language && language.length) {
+                            return language;
+                        }
+                    }
+                }
+
+                // Support older browsers
+                for (var i = 0; i < browserLanguagePropertyKeys.length; i++) {
+                    language = nav[browserLanguagePropertyKeys[i]];
+                    if (language && language.length) {
+                        return language;
+                    }
+                }
+
+                return 'en'; // Default fallback
+            }
+
+            var language = getFirstBrowserLanguage();
+            var languageCode = language.toLowerCase().split(/[_-]+/)[0];
+
+            // Redirect based on language
+            if (languageCode === 'ru') {
+                window.location.replace('/ru/');
+            } else {
+                window.location.replace('/en/');
+            }
+        })();
+    </script>
+    <noscript>
+        <meta http-equiv="refresh" content="0; url={{ .Permalink }}">
+    </noscript>
+</head>
+<body>
+    <p>Redirecting to <a href="{{ .Permalink }}">{{ .Permalink }}</a>...</p>
+</body>
+</html>
