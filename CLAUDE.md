@@ -124,6 +124,8 @@ gh run list --limit 1
 
 Typical deploy time: ~50 seconds
 
+**Important**: Site is proxied through Cloudflare. Changes may not appear immediately due to CDN caching. Don't expect instant updates after deployment - CF cache needs time to invalidate or expire.
+
 ## Additional Documentation
 
 For comprehensive technical information, architecture decisions, and troubleshooting, see:
