@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ .Site.Title }}</title>
+    <script>
+        (function() {
+            // Get browser language
+            const browserLang = navigator.language || navigator.userLanguage;
+
+            // Redirect based on language
+            if (browserLang.toLowerCase().startsWith('ru')) {
+                window.location.replace('/ru/');
+            } else {
+                window.location.replace('/en/');
+            }
+        })();
+    </script>
+    <noscript>
+        <meta http-equiv="refresh" content="0; url=/en/">
+    </noscript>
+</head>
+<body>
+    <p>Redirecting...</p>
+</body>
+</html>

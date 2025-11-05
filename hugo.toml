@@ -1,6 +1,7 @@
 baseURL = 'https://blog.lex.la/'
 theme = 'PaperMod'
 defaultContentLanguage = 'en'
+defaultContentLanguageInSubdir = true
 
 enableRobotsTXT = true
 buildDrafts = false
@@ -75,7 +76,7 @@ series = "series"
     languageName = "English"
     languageCode = "en-us"
     weight = 1
-    title = "blog.lex.la"
+    title = "Electric Dreams of the Simulacra Shepherd"
 
     [languages.en.params]
       description = "Personal blog about SRE, DevOps, and other tech stuff"
@@ -99,7 +100,7 @@ Writing about infrastructure, reliability engineering, k8s, Go, and distributed 
     languageName = "Русский"
     languageCode = "ru-ru"
     weight = 2
-    title = "blog.lex.la"
+    title = "Электросны Погонщика Симулякров"
 
     [languages.ru.params]
       description = "Личный блог про SRE, DevOps и другие технологии"
