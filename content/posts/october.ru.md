@@ -1,6 +1,6 @@
 ---
 title: "Отчёт за месяц: Kubernetes, проекты и разное"
-date: 2024-11-04T23:00:00+03:00
+date: 2025-11-04T23:00:00+03:00
 draft: false
 tags: ["kubernetes", "helm", "open-source", "homelab", "monthly-recap"]
 categories: ["tech"]
