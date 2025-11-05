@@ -88,7 +88,7 @@ series = "series"
       description = "Personal blog about SRE, DevOps, and other tech stuff"
 
     [languages.en.params.homeInfoParams]
-      Title = "Hi, I'm Aleksei, 32 👋"
+      Title = "Hi, I'm Aleksei 👋"
       Content = """
 SRE/DevOps engineer. Proud dog father. 🐕
 
@@ -112,7 +112,7 @@ Writing about infrastructure, reliability engineering, k8s, Go, and distributed 
       description = "Личный блог про SRE, DevOps и другие технологии"
 
     [languages.ru.params.homeInfoParams]
-      Title = "Привет, я Алексей, 32 👋"
+      Title = "Привет, я Алексей 👋"
       Content = """
 SRE/DevOps инженер. Гордый отец пса. 🐕
 
