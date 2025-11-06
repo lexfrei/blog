@@ -224,14 +224,6 @@ I didn't just throw PRs at them—I opened an issue, explained the plan, propose
 
 Jellyfin team honestly said: "We don't have resources for Helm chart, but we welcome help." That's normal. Projects live thanks to community.
 
-## What's Next
-
-Phase 1: integration branch, review, merge 10 PRs.
-
-Phase 2 (after Phase 1): tests (helm-unittest), CI workflows, values.schema.json, documentation, configuration examples.
-
-If everything goes well—possibly official maintainership.
-
 ---
 
 **P.S.** If you're preparing a large refactor in an open source project:
