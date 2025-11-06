@@ -1,0 +1,18 @@
+# Markdownlint configuration for blog posts
+
+# MD013/line-length - Line length
+# Disabled for blog posts - 80 chars is too restrictive for prose
+MD013: false
+
+# MD026/no-trailing-punctuation - Trailing punctuation in heading
+# Allow colons and question marks in headings for blog posts
+MD026:
+  punctuation: ".,;!"
+
+# MD033/no-inline-html - Inline HTML
+# Allow inline HTML for Hugo shortcodes and special formatting
+MD033: false
+
+# MD041/first-line-heading - First line in a file should be a top-level heading
+# Disabled because Hugo front matter comes first
+MD041: false

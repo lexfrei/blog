@@ -25,7 +25,22 @@ hugo new content posts/my-post.ru.md
 ```bash
 # Check for broken links
 hugo --gc --minify && echo "Build successful"
+
+# Validate markdown (required before commit)
+markdownlint content/posts/*.md
 ```
+
+### Content Quality
+
+**All blog posts MUST pass markdownlint validation before commit.**
+
+Configuration in `.markdownlint.yaml`:
+- MD013 (line length) disabled - 80 chars too restrictive for prose
+- MD026 allows colons and question marks in headings
+- MD032 (blank lines around lists) - ENABLED, must be followed
+- MD033 allows inline HTML for Hugo shortcodes
+
+Run `markdownlint --fix` to auto-fix formatting issues.
 
 ## Architecture
 
