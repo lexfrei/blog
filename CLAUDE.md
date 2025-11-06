@@ -6,6 +6,15 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 This is a Hugo-based multilingual blog (English/Russian) deployed to GitHub Pages at `blog.lex.la`. Uses PaperMod theme with custom modifications for comments, analytics, and language detection.
 
+## Git Workflow
+
+**This project uses direct commits to master branch.**
+
+- All changes commit and push directly to `master`
+- No feature branches or pull requests required
+- GitHub Actions automatically deploys on push to master
+- Always use `--signoff` flag per global CLAUDE.md standards
+
 ## Development Commands
 
 ### Local Development
