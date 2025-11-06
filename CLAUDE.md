@@ -98,7 +98,31 @@ categories: ["tech"]
 - **Analytics**: Cloudflare Web Analytics token in `extend_head.html`
 - **Social links**: Configured in `hugo.toml` under `params.socialIcons`
 
-## Translation Guidelines
+## Content Style and Guidelines
+
+### Writing Style Principles
+
+**Respect and Professionalism:**
+- **NEVER devalue others' work** - Avoid phrases like "abandoned piece of garbage code"
+- Instead: "team doesn't have resources/expertise for active maintenance"
+- **Facts only, no assumptions** about others' emotions or reactions
+- Only cite what's actually stated in feedback, never infer feelings
+- **No fabrications** - If something hasn't happened yet, don't claim it has
+- Respectful attitude toward maintainers - they're doing what they can with available resources
+
+**Content Focus:**
+- **Methodology over technical details** - Posts about approach and culture, not just code
+- **Key concepts** should drive narrative (e.g., "reducing cognitive load for reviewers")
+- **Experience and open source culture**, not pure technical tutorials
+- Remove sections that don't add value (e.g., unnecessary "What's Next" blocks)
+
+**Structure and Formatting:**
+- **TL;DR in blockquote** (`>`) for visual separation from main content
+- **Short slugs in URLs** - Use meaningful short slugs, not full titles
+- Date-based structure: `/YYYY/MM/slug/` with explicit `slug:` in front matter
+- Each post must have slug defined in front matter for URL control
+
+### Translation Guidelines
 
 When translating content between Russian and English, follow the **Tolkien translation philosophy**:
 
