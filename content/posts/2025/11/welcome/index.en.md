@@ -1,6 +1,7 @@
 ---
 title: "Welcome to the Blog"
 date: 2025-11-02T23:00:00+03:00
+slug: "welcome"
 draft: false
 tags: ["meta", "blog"]
 categories: ["announcements"]

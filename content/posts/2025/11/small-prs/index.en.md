@@ -1,6 +1,7 @@
 ---
 title: "10 PRs or One Giant: Choosing an Approach for Refactoring Jellyfin Helm Chart"
 date: 2025-11-05T18:30:00+03:00
+slug: "small-prs"
 draft: false
 tags: ["helm", "kubernetes", "jellyfin", "open-source", "methodology"]
 categories: ["tech"]

@@ -14,6 +14,9 @@ lastmod = [":git", "lastmod", "date", "publishDate"]
 publishDate = ["publishDate", "date"]
 expiryDate = ["expiryDate"]
 
+[permalinks]
+posts = "/:year/:month/:slug/"
+
 [minify]
 disableXML = true
 minifyOutput = true

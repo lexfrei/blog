@@ -1,6 +1,7 @@
 ---
 title: "Добро пожаловать в блог"
 date: 2025-11-02T23:00:00+03:00
+slug: "welcome"
 draft: false
 tags: ["мета", "блог"]
 categories: ["объявления"]

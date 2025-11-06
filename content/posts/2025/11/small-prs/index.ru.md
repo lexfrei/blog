@@ -1,6 +1,7 @@
 ---
 title: "10 PR или 1 большой: как я выбирал подход для рефакторинга Jellyfin Helm Chart"
 date: 2025-11-05T18:30:00+03:00
+slug: "small-prs"
 draft: false
 tags: ["helm", "kubernetes", "jellyfin", "open-source", "methodology"]
 categories: ["tech"]
