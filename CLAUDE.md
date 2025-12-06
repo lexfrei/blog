@@ -18,25 +18,37 @@ This is a Hugo-based multilingual blog (English/Russian) deployed to GitHub Page
 ## Development Commands
 
 ### Local Development
+
 ```bash
 # Start local server with drafts
 hugo server --buildDrafts
 
 # Build site
 hugo --gc --minify
-
-# Create new post (use language suffix)
-hugo new content posts/my-post.en.md
-hugo new content posts/my-post.ru.md
 ```
 
+### Creating New Posts
+
+Posts use page bundles in date-based directories:
+
+```bash
+# Create directory structure
+mkdir -p content/posts/2025/12/my-slug/
+
+# Create both language files
+touch content/posts/2025/12/my-slug/index.{en,ru}.md
+```
+
+**Do NOT use `hugo new`** — it doesn't create the correct directory structure.
+
 ### Testing
+
 ```bash
 # Check for broken links
 hugo --gc --minify && echo "Build successful"
 
 # Validate markdown (required before commit)
-markdownlint content/posts/*.md
+markdownlint 'content/posts/**/*.md'
 ```
 
 ### Content Quality
@@ -44,6 +56,7 @@ markdownlint content/posts/*.md
 **All blog posts MUST pass markdownlint validation before commit.**
 
 Configuration in `.markdownlint.yaml`:
+
 - MD013 (line length) disabled - 80 chars too restrictive for prose
 - MD026 allows colons and question marks in headings
 - MD032 (blank lines around lists) - ENABLED, must be followed
@@ -54,12 +67,14 @@ Run `markdownlint --fix` to auto-fix formatting issues.
 ## Architecture
 
 ### Multilingual Setup
+
 - **Structure**: Suffix-based (`.en.md`, `.ru.md`)
 - **URLs**: `/en/` for English, `/ru/` for Russian
 - **Root redirect**: `layouts/alias.html` detects browser language and redirects
 - **Config**: `defaultContentLanguageInSubdir = true` forces both languages into subdirectories
 
 **IMPORTANT**: Use `layouts/alias.html`, NOT `layouts/index.html` for root redirect:
+
 - `layouts/index.html` applies to ALL homepage pages (`/`, `/en/`, `/ru/`), causing infinite redirect loops
 - `layouts/alias.html` only applies to alias redirects (like root `/` when `defaultContentLanguageInSubdir = true`)
 - This is the official Hugo way to customize alias behavior without breaking language homepages
@@ -67,32 +82,45 @@ Run `markdownlint --fix` to auto-fix formatting issues.
 ### Custom Overrides
 
 **Root level:**
+
 - `layouts/alias.html` - Browser language detection for root `/` redirect (JavaScript-based)
 
 **Partials in `layouts/partials/`:**
+
 - `footer.html` - Removes "Powered by Hugo & PaperMod" attribution
 - `comments.html` - Integrates Giscus comments
 - `giscus.html` - Dynamic language support via `{{ .Site.Language.Lang }}`
 - `extend_head.html` - Cloudflare Web Analytics integration
 
 ### Post Front Matter
+
 ```yaml
 ---
 title: "Post Title"
-date: 2024-11-04T23:00:00+03:00
+date: 2025-11-04T23:00:00+03:00
+slug: "short-slug"
 draft: false
 tags: ["kubernetes", "helm"]
 categories: ["tech"]
 ---
 ```
 
+**Required fields:**
+
+- `title` — post title (can differ between languages)
+- `date` — publication date with timezone
+- `slug` — URL slug (must match directory name, same for both languages)
+- `draft` — set `true` for drafts, `false` for published
+
 ### Deployment
+
 - **Trigger**: Push to `master` branch
 - **Process**: GitHub Actions builds with Hugo 0.152.2 extended, deploys to GitHub Pages
 - **Domain**: Custom domain configured via `static/CNAME` and GitHub Pages API
 - **Theme**: PaperMod as git submodule (`themes/PaperMod`)
 
 ### Key Configuration Points
+
 - **baseURL**: `https://blog.lex.la/` (must match GitHub Pages custom domain)
 - **Comments**: Giscus using GitHub Discussions (repo: lexfrei/blog)
 - **Analytics**: Cloudflare Web Analytics token in `extend_head.html`
@@ -103,6 +131,7 @@ categories: ["tech"]
 ### Writing Style Principles
 
 **Respect and Professionalism:**
+
 - **NEVER devalue others' work** - Avoid phrases like "abandoned piece of garbage code"
 - Instead: "team doesn't have resources/expertise for active maintenance"
 - **Facts only, no assumptions** about others' emotions or reactions
@@ -111,12 +140,14 @@ categories: ["tech"]
 - Respectful attitude toward maintainers - they're doing what they can with available resources
 
 **Content Focus:**
+
 - **Methodology over technical details** - Posts about approach and culture, not just code
 - **Key concepts** should drive narrative (e.g., "reducing cognitive load for reviewers")
 - **Experience and open source culture**, not pure technical tutorials
 - Remove sections that don't add value (e.g., unnecessary "What's Next" blocks)
 
 **Structure and Formatting:**
+
 - **TL;DR in blockquote** (`>`) for visual separation from main content
 - **Short slugs in URLs** - Use meaningful short slugs, not full titles
 - Date-based structure: `/YYYY/MM/slug/` with explicit `slug:` in front matter
@@ -136,11 +167,13 @@ When translating content between Russian and English, follow the **Tolkien trans
 ### Content Moderation
 
 **Critical**: Any content that could damage professional reputation must be removed immediately:
+
 - Discriminatory jokes or references
 - Potentially offensive comparisons
 - Controversial political statements in technical context
 
 **When removing such content**:
+
 1. Remove it first (do not wait for approval)
 2. **Explicitly inform the user** about what was removed and why
 3. Suggest alternative phrasings if appropriate
@@ -152,6 +185,7 @@ The blog represents professional identity in the global tech community. Err on t
 ### Build Process
 
 For clean builds (recommended when testing major changes):
+
 ```bash
 rm -rf public && hugo --gc --minify
 ```
@@ -163,9 +197,10 @@ rm -rf public && hugo --gc --minify
 - **Static assets**: `static/` (copied as-is to `public/`)
 - **Theme**: `themes/PaperMod/` (git submodule, update with `git submodule update --init --recursive`)
 
-### Deployment
+### Checking Deployment Status
 
-GitHub Actions automatically deploys on push to `master`. Check deployment status:
+GitHub Actions automatically deploys on push to `master`. Check status:
+
 ```bash
 gh run list --limit 1
 ```
@@ -177,13 +212,15 @@ Typical deploy time: ~50 seconds
 ## Additional Documentation
 
 For comprehensive technical information, architecture decisions, and troubleshooting, see:
+
 - `README.md` - Full technical documentation and rationale for all technology choices
 - `hugo.toml` - All configuration options
 - `.github/workflows/hugo.yml` - Deployment workflow
 
 ## Important Notes
 
-- Both language versions of a post must use the same filename stem (e.g., `october.en.md` and `october.ru.md`)
+- Posts use page bundles: `content/posts/YYYY/MM/slug/index.{en,ru}.md`
+- Both language versions must exist with same slug in front matter
 - The root `/` page redirects based on `navigator.language` (Russian → `/ru/`, others → `/en/`)
 - Theme customizations in `layouts/` override theme defaults without modifying theme files
 - Submodules must be checked out recursively for theme to work
