@@ -1,6 +1,6 @@
 ---
 title: "Обновление прошивки Samsung SSD на ARM"
-date: 2025-12-07T12:00:00+03:00
+date: 2025-12-07T02:00:00+03:00
 slug: "samsung-fw"
 draft: false
 tags: ["arm", "raspberry-pi", "hardware", "reverse-engineering"]
