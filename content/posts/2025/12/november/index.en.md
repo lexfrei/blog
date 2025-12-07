@@ -74,7 +74,7 @@ In my view, this is a critical feature that would enable atomic release of all a
 
 Hit an interesting problem: Samsung SSD firmware updates only work through their official utility. Which doesn't exist for ARM.
 
-Had to extract the firmware and key from the updater. [Details here](https://gist.github.com/lexfrei/3e8dc9e97608502cf226371f6badb1e2).
+Had to extract the firmware and key from the updater. [Wrote a separate post](/en/2025/12/samsung-fw/) with details.
 
 ## PRs in Brief
 
