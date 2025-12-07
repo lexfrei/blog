@@ -105,6 +105,11 @@ Writing about infrastructure, reliability engineering, k8s, Go, and distributed 
 🔗 [me.lex.la](https://me.lex.la) | 📸 [ph.lex.la](https://ph.lex.la)
 """
 
+  [[languages.en.menu.main]]
+    name = "Projects"
+    url = "/en/projects/"
+    weight = 10
+
   [languages.ru]
     languageName = "Русский"
     languageCode = "ru-ru"
@@ -128,3 +133,8 @@ SRE/DevOps инженер. Гордый отец псына. 🐕
 
 🔗 [me.lex.la](https://me.lex.la) | 📸 [ph.lex.la](https://ph.lex.la)
 """
+
+  [[languages.ru.menu.main]]
+    name = "Проекты"
+    url = "/ru/projects/"
+    weight = 10
