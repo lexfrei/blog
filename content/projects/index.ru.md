@@ -16,11 +16,6 @@ Open source проекты, которые я разрабатываю и под
 - [GitHub](https://github.com/lexfrei/cloudflare-tunnel-gateway-controller)
 - [Документация](https://cf.k8s.lex.la/latest/)
 
-### minecraft-operator
-
-Kubernetes-оператор для управления серверами Minecraft (PaperMC). Автоматическое обновление серверов и плагинов через CRD.
-
-- [GitHub](https://github.com/lexfrei/minecraft-operator)
 
 ## Helm Charts
 
@@ -98,9 +93,3 @@ Rootless Docker-образ для PaperMC. Ежедневные автосбор
 
 - [GitHub](https://github.com/lexfrei/papermc-docker)
 - [ArtifactHub](https://artifacthub.io/packages/helm/minecraft/papermc)
-
-### mtg-scanner
-
-Распознавание карт Magic: The Gathering. Work in progress.
-
-- [GitHub](https://github.com/lexfrei/mtg-scanner)

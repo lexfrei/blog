@@ -16,12 +16,6 @@ Gateway API implementation over Cloudflare Tunnels. Manage tunnels via standard 
 - [GitHub](https://github.com/lexfrei/cloudflare-tunnel-gateway-controller)
 - [Documentation](https://cf.k8s.lex.la/latest/)
 
-### minecraft-operator
-
-Kubernetes operator for managing Minecraft servers (PaperMC). Automatic server and plugin updates via CRD.
-
-- [GitHub](https://github.com/lexfrei/minecraft-operator)
-
 ## Helm Charts
 
 ### vipalived
@@ -98,9 +92,3 @@ Rootless Docker image for PaperMC. Daily automated builds.
 
 - [GitHub](https://github.com/lexfrei/papermc-docker)
 - [ArtifactHub](https://artifacthub.io/packages/helm/minecraft/papermc)
-
-### mtg-scanner
-
-Magic: The Gathering card recognition. Work in progress.
-
-- [GitHub](https://github.com/lexfrei/mtg-scanner)
