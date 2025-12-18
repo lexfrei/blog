@@ -84,6 +84,12 @@ Telegram bot for Transmission management. Add torrents, check status, manage dow
 
 - [GitHub](https://github.com/lexfrei/transmission-bot)
 
+### mcp-loki
+
+MCP server for querying Grafana Loki. Allows AI assistants to read and analyze logs.
+
+- [GitHub](https://github.com/lexfrei/mcp-loki)
+
 ## Other
 
 ### papermc-docker

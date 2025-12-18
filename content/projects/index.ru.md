@@ -16,7 +16,6 @@ Open source проекты, которые я разрабатываю и под
 - [GitHub](https://github.com/lexfrei/cloudflare-tunnel-gateway-controller)
 - [Документация](https://cf.k8s.lex.la/latest/)
 
-
 ## Helm Charts
 
 ### vipalived
@@ -84,6 +83,12 @@ Webhook для external-dns с поддержкой UniFi OS. Управлени
 Telegram-бот для управления Transmission. Добавление торрентов, просмотр статуса, управление загрузками.
 
 - [GitHub](https://github.com/lexfrei/transmission-bot)
+
+### mcp-loki
+
+MCP-сервер для запросов к Grafana Loki. Позволяет AI-ассистентам читать и анализировать логи.
+
+- [GitHub](https://github.com/lexfrei/mcp-loki)
 
 ## Other
 
