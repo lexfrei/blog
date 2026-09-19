@@ -1,6 +1,6 @@
 ---
 title: "Публичный HTTPS для домашнего кластера без единого входящего порта"
-date: 2026-09-19T12:00:00+03:00
+date: 2026-09-19T05:00:00+03:00
 slug: "zero-inbound-ports"
 draft: true
 tags: ["kubernetes", "gateway-api", "cloudflare", "external-dns", "self-hosting"]
