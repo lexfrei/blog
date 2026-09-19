@@ -5,6 +5,7 @@ slug: "klipper-without-community"
 draft: false
 tags: ["open-source", "community", "klipper", "3d-printing"]
 categories: ["tech"]
+description: "У прошивки половины 3D-принтеров планеты bus factor равен единице. Во что это обходится вендорам, пользователям и сообществу, и почему форки здесь симптом."
 canonicalURL: "https://habr.com/ru/companies/aenix/articles/1062774/"
 ---
 

@@ -5,6 +5,7 @@ slug: "opensource-red-flag"
 draft: false
 tags: ["open-source", "community", "licensing", "forks"]
 categories: ["tech"]
+description: "Публичный код не значит открытый. Что на самом деле стоит «форкни и пользуйся», на примере семи апстрим-треков одного роутера."
 canonicalURL: "https://habr.com/ru/companies/aenix/articles/1078622/"
 ---
 

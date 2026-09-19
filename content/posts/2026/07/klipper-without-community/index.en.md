@@ -5,6 +5,7 @@ slug: "klipper-without-community"
 draft: false
 tags: ["open-source", "community", "klipper", "3d-printing"]
 categories: ["tech"]
+description: "The firmware behind half the planet's 3D printers has a bus factor of one. What that costs vendors, users and the community, and why the forks are a symptom."
 ---
 
 *English version of the Russian original published on [Habr](https://habr.com/ru/companies/aenix/articles/1062774/).*
