@@ -5,7 +5,7 @@ slug: "opensource-red-flag"
 draft: false
 tags: ["open-source", "community", "licensing", "forks"]
 categories: ["tech"]
-description: "Public code is not open code. What "fork it and use it" really costs, told through seven upstream tracks for one router."
+description: 'Public code is not open code. What "fork it and use it" really costs, told through seven upstream tracks for one router.'
 ---
 
 *English version of the Russian original published on [Habr](https://habr.com/ru/companies/aenix/articles/1078622/).*
