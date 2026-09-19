@@ -17,6 +17,9 @@ expiryDate = ["expiryDate"]
 [permalinks]
 posts = "/:year/:month/:slug/"
 
+[markup.goldmark.renderer]
+unsafe = true
+
 [minify]
 disableXML = true
 minifyOutput = true

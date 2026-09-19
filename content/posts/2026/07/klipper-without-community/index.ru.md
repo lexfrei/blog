@@ -24,10 +24,10 @@ Kevin O’Connor — выдающийся инженер. SeaBIOS, Klipper — �
 
 Откройте [CONTRIBUTING.md](https://github.com/Klipper3d/klipper/blob/master/docs/CONTRIBUTING.md) Klipper. Там есть таблица «The Klipper “maintainers” are»:
 
-|                |                                      |
-|----------------|--------------------------------------|
-| Name           | GitHub name                          |
-| Kevin O’Connor | [@KevinOConnor](/users/KevinOConnor) |
+|                |                                                  |
+|----------------|--------------------------------------------------|
+| Name           | GitHub name                                      |
+| Kevin O’Connor | [@KevinOConnor](https://github.com/KevinOConnor) |
 
 Всё. Одна строка. Ревьюеров четверо (включая самого Кевина), но право коммита в master — только у мейнтейнера. Проект с 11+ тысячами звёзд, тысячами форков и, вероятно, миллионами инсталляций (практически каждый серьёзный самосбор и куча вендорских машин) имеет bus factor, равный единице.
 
