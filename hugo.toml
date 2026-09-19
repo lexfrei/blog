@@ -25,6 +25,10 @@ minifyOutput = true
 env = "production"
 author = "Aleksei Sviridkin"
 
+[params.label]
+icon = "avatar.jpg"
+iconHeight = 30
+
 defaultTheme = "auto"
 disableThemeToggle = false
 
@@ -47,10 +51,6 @@ tocopen = false
 [[params.socialIcons]]
 name = "github"
 url = "https://github.com/lexfrei"
-
-[[params.socialIcons]]
-name = "x"
-url = "https://x.com/lexfrei"
 
 [[params.socialIcons]]
 name = "linkedin"
@@ -89,21 +89,18 @@ series = "series"
 
     [languages.en.params]
       description = "Personal blog about SRE, DevOps, and other tech stuff"
+      images = ["/og-en.png"]
 
     [languages.en.params.homeInfoParams]
       Title = "Hi, I'm Aleksei 👋"
       Content = """
-SRE/DevOps engineer. Proud dog dad. 🐕
+SRE and platform engineer at Ænix, Tbilisi. Proud dog dad. 🐕
 
-Living in Moscow, Russia. **Looking for relocation opportunities.**
+Maintainer of Cozystack (CNCF Sandbox), where I also lead the GPU/AI track. Patches in the Linux kernel and Git, printer boards in Armbian, and a long tail of controllers, charts, and MCP servers.
 
-Writing about infrastructure, reliability engineering, k8s, Go, and distributed systems.
+Writing here about infrastructure, reliability, Kubernetes, open source as practice, and herding LLMs.
 
-**Skills:** Linux · Kubernetes · Go
-
-**Interests:** ARM adoption · Open Source · Photography
-
-🔗 [me.lex.la](https://me.lex.la) | 📸 [ph.lex.la](https://ph.lex.la)
+🔗 [awesome.lexfrei.dev](https://awesome.lexfrei.dev) · all projects | [me.lex.la](https://me.lex.la) · contacts and PGP
 """
 
   [[languages.en.menu.main]]
@@ -119,21 +116,18 @@ Writing about infrastructure, reliability engineering, k8s, Go, and distributed 
 
     [languages.ru.params]
       description = "Личный блог про SRE, DevOps и другие технологии"
+      images = ["/og-ru.png"]
 
     [languages.ru.params.homeInfoParams]
       Title = "Привет, я Алексей 👋"
       Content = """
-SRE/DevOps инженер. Гордый отец псына. 🐕
+SRE и платформенный инженер в Ænix, Тбилиси. Гордый отец псына. 🐕
 
-Живу в Москве, Россия. **Ищу возможности релокации.**
+Мейнтейнер Cozystack (CNCF Sandbox), там же веду GPU/AI-трек. Патчи в ядро Linux и Git, платы принтеров в Armbian и длинный хвост контроллеров, чартов и MCP-серверов.
 
-Пишу про инфраструктуру, reliability engineering, k8s, Go и распределённые системы.
+Пишу здесь про инфраструктуру, надёжность, Kubernetes, опенсорс как практику и работу погонщика симулякров.
 
-**Навыки:** Linux · Kubernetes · Go
-
-**Интересы:** ARM adoption · Open Source · Фотография
-
-🔗 [me.lex.la](https://me.lex.la) | 📸 [ph.lex.la](https://ph.lex.la)
+🔗 [awesome.lexfrei.dev](https://awesome.lexfrei.dev) · все проекты | [me.lex.la](https://me.lex.la) · контакты и PGP
 """
 
   [[languages.ru.menu.main]]
